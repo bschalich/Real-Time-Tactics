@@ -1,0 +1,12 @@
+CC=g++ -g -std=c++11
+
+CFLAGS+=-Wall -Wextra
+CFLAGS+=-I/usr/include/freetype2 -I/usr/include/libpng12
+CFLAGS+=-lsfml-window -lsfml-system -lsfml-audio
+CFLAGS+=-lfreetype -lpng12 -lz -lassimp -lGL -lGLU -lGLEW
+
+tactics : *.cpp *.h 
+	$(CC) *.cpp -o tactics $(CFLAGS)
+
+clean :
+	rm *.o

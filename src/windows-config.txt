@@ -1,0 +1,19 @@
+Copy SFML-2, glew-1.10.0, freeglut, and freetype-2.3.5 into C:\Libraries
+Copy SFML-2\bin, glew-1.10.0\bin, freeglut\bin, and freetype-2.3.5\bin into the Debug folder of the project
+Add the following information to the project (not solution) properties
+
+Project > Configuration Properties > C/C++
+==========================================
+General > Additional Include Directories
+----------------------------------------
+	C:\Libraries\SFML-2.1\include;C:\Libraries\freetype-2.3.5\include;C:\Libraries\freetype-2.3.5\include\freetype2;C:\Libraries\glew-1.10.0\include;C:\Libraries\freeglut\include;C:\Program Files\Assimp\include
+
+Project > Configuration Properties > Linker
+===========================================
+General > Additional Library Directories
+----------------------------------------
+	C:\Libraries\SFML-2.1\lib;C:\Libraries\freetype-2.3.5\lib;C:\Libraries\glew-1.10.0\lib\Release\Win32;C:\Libraries\freeglut\lib;C:\Program Files\Assimp\lib\x86;C:\Windows\SysWOW64
+	
+Input > Additional Dependencies
+-------------------------------
+	[...]glu32.lib;freeglut.lib;glew32.lib;opengl32.lib;assimp.lib;sfml-system-d.lib;sfml-main-d.lib;sfml-graphics-d.lib;sfml-audio-d.lib;sfml-network-d.lib;sfml-window-d.lib;%(AdditionalDependencies)

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset><contributor><author></author><authoring_tool>FBX COLLADA exporter</authoring_tool><comments></comments></contributor><created>2014-04-22T21:08:58Z</created><keywords></keywords><modified>2014-04-22T21:08:58Z</modified><revision></revision><subject></subject><title></title><unit meter="0.010000" name="centimeter"></unit><up_axis>Y_UP</up_axis></asset>
+  <library_images>
+    <image id="file1-image" name="file1"><init_from>file:///Users/kevinweber/Documents/Developer/Real-Time-Tactics/Models/Users/kevinweber/Documents/Developer/Real-Time-Tactics/Models/grid.bmp</init_from></image>
+  </library_images>
+  <library_materials>
+    <material id="lambert2" name="lambert2">
+      <instance_effect url="#lambert2-fx"/>
+    </material>
+  </library_materials>
+  <library_effects>
+    <effect id="lambert2-fx" name="lambert2">
+      <profile_COMMON>
+        <technique sid="standard">
+          <lambert>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.000000  0.000000 0.000000 1.000000</color>
+            </ambient>
+            <diffuse>
+              <texture texture="file1-image" texcoord="CHANNEL0">
+                <extra>
+                  <technique profile="MAYA">
+                    <wrapU sid="wrapU0">TRUE</wrapU>
+                    <wrapV sid="wrapV0">TRUE</wrapV>
+                    <blend_mode>NONE</blend_mode>
+                  </technique>
+                </extra>
+              </texture>
+            </diffuse>
+            <transparent opaque="RGB_ZERO">
+              <color sid="transparent">0.000000  0.000000 0.000000 1.000000</color>
+            </transparent>
+            <transparency>
+              <float sid="transparency">1.000000</float>
+            </transparency>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_geometries>
+    <geometry id="Tile_Mesh-lib" name="Tile_MeshMesh">
+      <mesh>
+        <source id="Tile_Mesh-POSITION">
+          <float_array id="Tile_Mesh-POSITION-array" count="12">
+50.000000 -50.000000 -50.000000
+50.000000 -50.000000 50.000000
+-50.000000 -50.000000 50.000000
+-50.000000 -50.000000 -50.000000
+</float_array>
+          <technique_common>
+            <accessor source="#Tile_Mesh-POSITION-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Tile_Mesh-Normal0">
+          <float_array id="Tile_Mesh-Normal0-array" count="12">
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+</float_array>
+          <technique_common>
+            <accessor source="#Tile_Mesh-Normal0-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Tile_Mesh-UV0">
+          <float_array id="Tile_Mesh-UV0-array" count="8">
+0.001992 0.001992
+0.998008 0.001992
+0.998008 0.998008
+0.001992 0.998008
+</float_array>
+          <technique_common>
+            <accessor source="#Tile_Mesh-UV0-array" count="4" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Tile_Mesh-VERTEX">
+          <input semantic="POSITION" source="#Tile_Mesh-POSITION"/>
+          <input semantic="NORMAL" source="#Tile_Mesh-Normal0"/>
+        </vertices>
+        <triangles count="2" material="lambert2"><input semantic="VERTEX" offset="0" source="#Tile_Mesh-VERTEX"/><input semantic="TEXCOORD" offset="1" set="0" source="#Tile_Mesh-UV0"/><p> 2 0 1 1 0 2 0 2 3 3 2 0</p></triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_animations>
+    <animation id="Tile_Mesh-anim" name="Tile_Mesh"><animation><source id="Tile_Mesh-Matrix-animation-input"><float_array id="Tile_Mesh-Matrix-animation-input-array" count="0">
+</float_array><technique_common><accessor source="#Tile_Mesh-Matrix-animation-input-array" count="0"><param name="TIME" type="float"/></accessor></technique_common></source><source id="Tile_Mesh-Matrix-animation-output-transform"><float_array id="Tile_Mesh-Matrix-animation-output-transform-array" count="0">
+</float_array><technique_common><accessor source="#Tile_Mesh-Matrix-animation-output-transform-array" count="0" stride="16"><param type="float4x4"/></accessor></technique_common></source><source id="Tile_Mesh-Interpolations"><Name_array id="Tile_Mesh-Interpolations-array" count="0">
+</Name_array><technique_common><accessor source="#Tile_Mesh-Interpolations-array" count="0"><param type="name"/></accessor></technique_common></source><sampler id="Tile_Mesh-Matrix-animation-transform"><input semantic="INPUT" source="#Tile_Mesh-Matrix-animation-input"/><input semantic="OUTPUT" source="#Tile_Mesh-Matrix-animation-output-transform"/><input semantic="INTERPOLATION" source="#Tile_Mesh-Interpolations"/></sampler><channel source="#Tile_Mesh-Matrix-animation-transform" target="Tile_Mesh/matrix"/></animation></animation>
+  </library_animations>
+  <library_visual_scenes>
+    <visual_scene id="Tile" name="Tile">
+      <node name="Tile_Mesh" id="Tile_Mesh" sid="Tile_Mesh"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#Tile_Mesh-lib"><bind_material><technique_common><instance_material symbol="lambert2" target="#lambert2"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node>
+      <extra><technique profile="MAX3D"><frame_rate>24.000000</frame_rate></technique><technique profile="FCOLLADA"><start_time>0.041667</start_time><end_time>2.000000</end_time></technique></extra>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Tile"></instance_visual_scene>
+  </scene>
+</COLLADA>
