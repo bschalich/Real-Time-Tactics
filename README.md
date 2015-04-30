@@ -30,12 +30,12 @@ Combatant:
 	constructor. This way we are able to determine aspects of the Combatant like color once 
 	in one place in the code instead of in three different classes. 
 	
-	In this specific project we didn't want to hassle with too much inheritance, so we instead
-	created a type enum for Warrior, Mage, and Archer. You will see that certain functions 
-	in Combatant have switch statements that execute different code depending on the type of the
-	combatant. In this project we use inheritance to give each Combatant distinct types of 
-	attacks that are defined within each subclass of Combatant, but Combatant handles most 
-	other functionality.
+	In this specific project we didn't want to hassle with too much inheritance, so we 
+	instead created a type enum for Warrior, Mage, and Archer. You will see that certain 
+	functions in Combatant have switch statements that execute different code depending 
+	on the type of the combatant. In this project we use inheritance to give each 
+	Combatant distinct types of attacks that are defined within each subclass of 
+	Combatant, but Combatant handles most other functionality.
 	
     In the constructor AI is given to the Combatant depending on whether the Combatant is
     a hero (a player controlled character) or an enemy (computer controlled character)
@@ -43,9 +43,9 @@ Combatant:
     The way a Combatant acquires a target is through a variable named "enemy". The "enemy" 
     variable initially set to null and when an enemy enters the range of the Combatant 
     it is set to an enemy. The Combatant then attacks that enemy until it is given another 
-    instruction or until the enemy is dead. When a new instruction is given or the enemy dies
-    the "enemy" variable is set back to NULL. In the StateMachine if "enemy" is NULL the 
-    character does not aggress.
+    instruction or until the enemy is dead. When a new instruction is given or the enemy 
+    dies the "enemy" variable is set back to NULL. In the StateMachine if "enemy" is NULL 
+    the character does not aggress.
     
     Much of this code is tedious due to how close we were working with our graphics engine.
     This was a graphics based project and we were not allowed to abstract it away too much.   
