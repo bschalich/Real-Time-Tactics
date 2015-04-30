@@ -28,9 +28,7 @@ Combatant:
     initial positions are set and the bounding boxes are created upon creating
 	a combatant. Next data is initialized depending on the type specified in the Combatant 
 	constructor. This way we are able to determine aspects of the Combatant like color once 
-	in one place in the code instead of in three different classes. 
-	
-	In this specific project we didn't want to hassle with too much inheritance, so we 
+	in one place in the code instead of in three different classes. In this specific project we didn't want to hassle with too much inheritance, so we 
 	instead created a type enum for Warrior, Mage, and Archer. You will see that certain 
 	functions in Combatant have switch statements that execute different code depending 
 	on the type of the combatant. In this project we use inheritance to give each 
