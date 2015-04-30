@@ -43,7 +43,6 @@ Combatant:
     instruction or until the enemy is dead. When a new instruction is given or the enemy 
     dies the "enemy" variable is set back to NULL. In the StateMachine if "enemy" is NULL 
     the character does not aggress.
-    
     Much of this code is tedious due to how close we were working with our graphics engine.
     This was a graphics based project and we were not allowed to abstract it away too much.   
 
