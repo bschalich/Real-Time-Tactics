@@ -19,7 +19,7 @@ NOTE: Unfortunately some of the code has deprecated since this game was made and
 Feel free to browse around the source code, but what I want to focus primarily on are six
 classes: Combatant, Archer, Warrior, Mage, and StateMachine, and part of GameController
 
-Combatant:
+Combatant
 	The Combatant class is the super class to the Archer, Warrior, and Mage. There is 
 	generic data that applies to any type of combatant, such as velocity. 
 	You may notice sound data from all types of combatants at the top. I was 
@@ -28,7 +28,9 @@ Combatant:
     initial positions are set and the bounding boxes are created upon creating
 	a combatant. Next data is initialized depending on the type specified in the Combatant 
 	constructor. This way we are able to determine aspects of the Combatant like color once 
-	in one place in the code instead of in three different classes. In this specific project we didn't want to hassle with too much inheritance, so we 
+	in one place in the code instead of in three different classes. 
+	
+	In this specific project we didn't want to hassle with too much inheritance, so we 
 	instead created a type enum for Warrior, Mage, and Archer. You will see that certain 
 	functions in Combatant have switch statements that execute different code depending 
 	on the type of the combatant. In this project we use inheritance to give each 
@@ -48,7 +50,7 @@ Combatant:
     Much of this code is tedious due to how close we were working with our graphics engine.
     This was a graphics based project and we were not allowed to abstract it away too much.   
 
-Archer:
+Archer
 	A subclass of Combatant. It has its own specific way it attacks and a unique attack
 	animation. The archer is checking every frame to see if there is an enemy in range. If
 	there is it attacks the target. The archers attack speed is based off a clock created 
